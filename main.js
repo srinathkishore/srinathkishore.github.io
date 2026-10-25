@@ -836,19 +836,6 @@
     card.addEventListener('focusout', off);
   });
 
-  // Phones: the project cards are a swipe row; turn the planet toward whichever card is in view.
-  const projectGrid = document.querySelector('.project-grid');
-  if (projectGrid) {
-    const cards = [...projectGrid.querySelectorAll('[data-site]')];
-    let shown = null;
-    projectGrid.addEventListener('scroll', () => {
-      const step = cards[1] ? cards[1].offsetLeft - cards[0].offsetLeft : 1;
-      const i = Math.min(cards.length - 1, Math.round(projectGrid.scrollLeft / step));
-      const site = projectGrid.scrollLeft < 8 ? null : cards[i].dataset.site;
-      if (site !== shown && window.planetFocus) window.planetFocus((shown = site));
-    }, { passive: true });
-  }
-
   const code = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
   let pos = 0;
   const sheetOpen = () => !!(sheet && sheet.open);

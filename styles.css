@@ -629,21 +629,23 @@ body::after {
   .story-card p, .job-note, .project-sum, .quest-sub { line-height: var(--lh-small); }
   .about-actions { margin-top: 0.7rem; }
   .btn { padding: 0.7rem 1rem; }
-  .career-grid { grid-template-columns: minmax(0, 1fr); }
-  .project-grid {
-    grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 86%;
-    overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scrollbar-width: none;
-    margin-inline: calc(-1 * var(--pad)); padding: 4px var(--pad); scroll-padding-inline: var(--pad);
-  }
-  .project-grid::-webkit-scrollbar { display: none; }
-  .project { scroll-snap-align: start; }
+  .career-grid, .project-grid { grid-template-columns: minmax(0, 1fr); }
+  /* Compact project cards, like the career ones: mini visual + title + two lines; the whole card opens the sheet. */
+  .project { position: relative; display: grid; grid-template-columns: 56px minmax(0, 1fr); column-gap: 0.9rem; align-items: center; }
+  .project-visual { width: 56px; height: 56px; margin: 0; }
+  .project .chapter-visual { border-radius: 14px; }
+  .project .badge, .project .eval { display: none; }
+  .project-sum, .project .text-btn { grid-column: 1 / -1; }
+  .project-sum { margin: 0.6rem 0 0.5rem; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; overflow: hidden; }
+  .project-proof { display: none; }
+  .project .text-btn { position: static; justify-self: start; }
+  .project .text-btn::after { inset: 0; border-radius: inherit; }
   .career-grid .job-points li:nth-child(n+2) { display: none; }
-  .project-visual { height: 100px; margin-bottom: 0.75rem; }
   .email { font-size: clamp(1.25rem, 7vw, 2rem); }
   .job-head { margin-bottom: 0.5rem; }
   .job-where { margin-bottom: 0.4rem; }
   .job h3 { font-size: var(--step-0); }
-  .project h3 { font-size: var(--step-2); }
+  .project h3 { margin: 0; font-size: var(--step-0); }
   .quests .section-title { margin-bottom: 0.9rem; }
   .quest-grid { grid-template-columns: minmax(0, 1fr); gap: 0.75rem; }
   .quest { display: flex; flex-direction: column; gap: 0.5rem; padding: 1rem; border-radius: 18px; }
@@ -666,8 +668,6 @@ body::after {
   .scene .section-title, .about-card .section-title { font-size: var(--step-2); }
   .about-quote { display: none; }
   .tiles .sub { display: none; }
-  .project-visual { height: 80px; margin-bottom: 0.6rem; }
-  .project-proof { display: none; }
   .hero { padding-block: 4.5rem 6rem; }
   .hero-line { margin-top: 1.25rem; font-size: var(--step-0); }
   .hero-hint { margin-top: 0.75rem; }
@@ -680,15 +680,15 @@ body::after {
   .story-card .about-actions { margin-top: 0.5rem; }
   .btn { padding: 0.55rem 0.9rem; }
   .job-note { display: none; }
+  .project { grid-template-columns: 48px minmax(0, 1fr); }
+  .project-visual { width: 48px; height: 48px; }
+  .project-sum { margin: 0.4rem 0 0.3rem; }
+  .card.project { padding-block: 0.75rem; }
   .job-where { margin-bottom: 0; }
   .contact .planet-anchor { width: min(120px, 16svh); margin-bottom: 0.75rem; }
   .contact .section-title { margin-bottom: 1rem; }
   .availability { margin-top: 0.9rem; }
   .socials { margin-top: 0.75rem; gap: 0.5rem; }
-}
-@media (max-width: 640px) and (max-height: 600px) {
-  .project-visual { height: 64px; }
-  .project-sum { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; line-clamp: 3; overflow: hidden; }
 }
 @media (max-width: 420px) {
   .glance a { padding: 0.45rem 0.7rem; }
@@ -708,8 +708,7 @@ body::after {
   .scene-planet { align-self: start; }
   .scene-planet .planet-anchor { width: 100%; height: auto; max-width: min(15rem, 60svh); }
   .scene .section-title, .about-card .section-title { font-size: var(--step-3); }
-  .career-grid, .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-flow: row; overflow: visible; margin-inline: 0; padding: 0; }
-  .project-visual { height: 96px; }
+  .career-grid, .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .hero { padding-block: 4rem 5rem; }
   .hero-name { font-size: clamp(2.5rem, 9vw, 5.5rem); }
   .hero-name span { display: inline-block; }
@@ -720,6 +719,10 @@ body::after {
   .contact .section-title { margin-bottom: 0.75rem; }
   .availability { margin-top: 0.75rem; }
   .glance .status { display: none; }
+}
+
+@media (orientation: landscape) and (max-height: 500px) and (min-width: 641px) {
+  .project-visual { height: 96px; }
 }
 
 /* Big screens: scale the whole rem-based layout up instead of leaving it small in the middle. */

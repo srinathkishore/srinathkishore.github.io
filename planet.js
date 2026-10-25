@@ -282,11 +282,14 @@
     const lift = Math.min(Math.max(vh * 0.16, 80), 160);
     return { x: vw / 2, y: vh - lift + R, r: R };
   };
-  const minimapPos = () => {
+  const minimapPos = (sy) => {
     const vw = innerWidth, vh = innerHeight;
-    const small = vw < 640;
-    const r = small ? 46 : 56;
-    return { x: small ? vw - r * 0.45 : vw - r - 40, y: small ? vh * 0.5 : vh - r - 40, r };
+    if (vw >= 640 && vh > 500) return { x: vw - 96, y: vh - 96, r: 56 };
+    // Phones: sit right of the section title, between the theme toggle and the cards.
+    const t = geo.questsTitle;
+    const top = t.section + t.toggle + 8, bottom = t.grid - 8;
+    const r = Math.min(46, Math.max(24, (vw - t.right - 32) / 2), Math.max(24, (bottom - top) / 2));
+    return { x: vw - 20 - r, y: (top + bottom) / 2 - sy, r };
   };
 
   const KEYS = [
@@ -310,6 +313,16 @@
       const r = el.getBoundingClientRect();
       geo[name] = { x: r.left, top: r.top + sy, w: r.width, h: r.height };
     }
+    const qt = $('#quests-title');
+    const ink = document.createRange();
+    ink.selectNodeContents(qt);
+    const docTop = (el) => { let y = 0; for (; el; el = el.offsetParent) y += el.offsetTop; return y; };
+    geo.questsTitle = {
+      right: ink.getBoundingClientRect().right,
+      section: docTop($('#quests')),
+      toggle: $('.theme-toggle').getBoundingClientRect().bottom,
+      grid: docTop($('.quest-grid')),
+    };
     const maxScroll = root.scrollHeight - innerHeight;
     stops = [0, ...stopEls.map((el) => el.getBoundingClientRect().top + sy)];
     stops[stops.length - 1] = Math.min(stops[stops.length - 1], maxScroll);
@@ -343,6 +356,8 @@
   }
 
   const labelLayer = $('.planet-labels');
+  // Same query as the single-column layout in styles.css.
+  const oneColumn = matchMedia('(max-width: 860px) and (min-height: 501px), (max-width: 1180px) and (orientation: portrait) and (min-height: 1100px)');
   const logo = (name, w, city) =>
     `<img class="on-dark" src="assets/logos/${name}.png" alt="" width="${w}" height="13">`
     + `<img class="on-light" src="assets/logos/${name}-dark.png" alt="" width="${w}" height="13"><b>${city}</b>`;
@@ -351,14 +366,14 @@
     { html: logo('amazon', 44, 'Chennai'), logo: true, site: 'beacon', keys: [2] },
     { html: logo('greeno', 43, 'Coimbatore'), logo: true, site: 'coimbatore', keys: [2], left: true },
     { html: 'Chess Analyzer', site: 'chess', keys: [WORK], left: true },
-    { html: 'Agents Circle', site: 'atoll', keys: [WORK], left: true },
+    { html: 'Agents Circle', site: 'atoll', keys: [WORK], left: true, narrowLeft: false },
     { html: 'Uncharted · your idea?', site: 'uncharted', keys: [5] },
   ].map((l) => {
     const el = document.createElement('div');
     el.className = 'planet-label' + (l.logo ? ' logo' : '') + (l.left ? ' left' : '');
     el.innerHTML = `<span>${l.html}</span>`;
     labelLayer.appendChild(el);
-    return { ...l, el, pill: el.firstElementChild, vec: toVec(...SITES[l.site]), op: '', side: !!l.left, shift: 0 };
+    return { ...l, el, pill: el.firstElementChild, vec: toVec(...SITES[l.site]), op: '', side: !!l.left, shift: 0, dy: 0 };
   });
   const plane = $('.flight-plane');
   const FROM = toVec(...SITES.coimbatore), TO = toVec(...SITES.beacon);
@@ -506,6 +521,7 @@
     gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
 
     const weightFor = (keys) => Math.max(...keys.map((k) => clamp01(1 - Math.abs(f - k) * 2.2)));
+    const placed = [];
     for (const l of LABELS) {
       const v = toView(rot, l.vec);
       const o = weightFor(l.keys) * clamp01((v[2] - 0.25) / 0.3);
@@ -515,14 +531,24 @@
       const px = x + v[0] * r;
       const lw = (l.w ||= l.pill.offsetWidth) + 14;
       const vw = innerWidth;
-      let left = !!l.left;
+      let left = oneColumn.matches && 'narrowLeft' in l ? l.narrowLeft : !!l.left;
       if (left && px - lw < 8) left = false;
       else if (!left && px + lw > vw - 8) left = true;
       if (px - lw < 8 && px + lw > vw - 8) left = px > vw / 2;
       const shift = Math.round(left ? Math.max(0, 8 - (px - lw)) : Math.min(0, vw - 8 - (px + lw)));
       if (left !== l.side) l.el.classList.toggle('left', (l.side = left));
       if (shift !== l.shift) l.pill.style.setProperty('--shift', `${(l.shift = shift)}px`);
-      l.el.style.transform = `translate3d(${px.toFixed(1)}px, ${(yy - v[1] * r).toFixed(1)}px, 0)`;
+      // Small planets put landmarks close together: nudge a pill up or down so it doesn't cover another.
+      const py = yy - v[1] * r, ph = (l.h ||= l.pill.offsetHeight) + 4;
+      const x0 = (left ? px - lw : px) + shift, x1 = x0 + lw;
+      let dy = 0;
+      for (const q of placed) {
+        if (x0 < q.x1 && x1 > q.x0 && Math.abs(py + dy - q.y) < ph) dy = q.y - py + (py >= q.y ? ph : -ph);
+      }
+      dy = Math.round(dy);
+      placed.push({ x0, x1, y: py + dy });
+      if (dy !== l.dy) l.pill.style.setProperty('--dy', `${(l.dy = dy)}px`);
+      l.el.style.transform = `translate3d(${px.toFixed(1)}px, ${py.toFixed(1)}px, 0)`;
     }
 
     const pw = weightFor([2]);
@@ -588,7 +614,7 @@
   });
 
   function layout() {
-    LABELS.forEach((l) => { l.w = 0; });
+    LABELS.forEach((l) => { l.w = 0; l.h = 0; });
     measure();
     dirty = true;
     if (resize()) frame(performance.now(), true);

@@ -1,0 +1,167 @@
+\documentclass[11pt,a4paper]{article}
+
+% ================= PACKAGES =================
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper,left=1.35cm,right=1.35cm,
+            top=1.15cm,bottom=1.15cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{tabularx}
+\usepackage{microtype}
+
+% ================= PAGE SETTINGS =================
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\tabcolsep}{0pt}
+\urlstyle{same}
+
+% ================= SECTION FORMATTING =================
+\titleformat{\section}
+  {\bfseries\normalsize}
+  {}{0pt}{}[\titlerule]
+
+\titlespacing*{\section}{0pt}{10pt}{5pt}
+
+% ================= LIST FORMATTING =================
+\setlist[itemize]{
+  leftmargin=4.5mm,
+  itemsep=2pt,
+  topsep=2pt,
+  parsep=0pt,
+  partopsep=0pt
+}
+
+% ================= ENTRY HEADER =================
+\newcommand{\entryheader}[2]{%
+  \begin{tabularx}{\textwidth}{@{}X r@{}}
+    \textbf{#1} & \textit{#2}
+  \end{tabularx}%
+}
+
+\begin{document}
+
+% ================= HEADER =================
+\begin{center}
+  {\LARGE \textbf{Srinath Kishore A}}\\[3pt]
+  \normalsize
+  Systems Development Engineer
+  \textbar{} GenAI \& Backend Systems\\[4pt]
+  \small
+  \href{mailto:srinathkishore.a@gmail.com}
+       {srinathkishore.a@gmail.com}
+  \textbar{}
+  \href{https://linkedin.com/in/srinathkishore}
+       {linkedin.com/in/srinathkishore}
+  \textbar{}
+  \href{https://srinathkishore.github.io}
+       {srinathkishore.github.io}
+\end{center}
+
+\vspace{-3pt}
+
+% ================= SUMMARY =================
+\section*{Summary}
+
+Systems Development Engineer at \textbf{Amazon} with experience
+building GenAI applications and backend systems using Python,
+Django, PostgreSQL, and AWS. Specialized in LLM-powered enterprise
+applications, retrieval-augmented generation (RAG), multi-agent
+orchestration, concurrent APIs, and enterprise integrations.
+Experienced in authentication, observability, production
+deployments, and backend reliability.
+
+% ================= EXPERIENCE =================
+\section*{Experience}
+
+\entryheader
+  {Systems Development Engineer I -- Amazon}
+  {Sep 2026 -- Present}
+Chennai, India
+
+\begin{itemize}
+  \item Develop and improve \textbf{internal engineering tools}
+  to streamline team workflows and improve developer productivity.
+
+  \item Build features and automation that reduce manual effort
+  and simplify repetitive engineering tasks.
+
+  \item Improve the \textbf{reliability, performance, and usability}
+  of internal tools through iterative enhancements and user feedback.
+
+  \item Contribute to code reviews, design discussions, and
+  \textbf{CI/CD workflows} to deliver maintainable, well-tested changes.
+\end{itemize}
+
+\vspace{8pt}
+
+\entryheader
+  {Software Engineer -- GenAI Backend Systems}
+  {Jun 2024 -- Sep 2026}
+Greeno Tech Solutions Pvt Ltd, Coimbatore, India
+
+\begin{itemize}
+  \item Built an \textbf{LLM-powered enterprise multi-agent platform}
+  comprising Buyer, Requester, Inventory, and HR agents using
+  Python, Django, PostgreSQL, and AWS, with RAG, tool calling,
+  and server-sent events (SSE) streaming.
+
+  \item Engineered a \textbf{concurrent, multi-session backend}
+  with persistent conversational context, agent orchestration,
+  and retrieval pipelines integrating enterprise systems through
+  OAuth-secured APIs.
+
+  \item Designed a \textbf{canonical response architecture} to
+  standardize agent outputs across a web chat interface,
+  Microsoft Teams, and extensible communication channels.
+
+  \item Implemented authentication, \textbf{role-based access
+  control (RBAC)} and deployment hardening; supported deployment,
+  monitoring, debugging, and performance optimization.
+
+  \item Developed logging, observability, and anomaly-detection
+  pipelines to analyze request patterns and latency, helping
+  accelerate troubleshooting and improve system resilience.
+\end{itemize}
+
+% ================= TECHNICAL SKILLS =================
+\section*{Technical Skills}
+
+\begin{tabularx}{\textwidth}{@{}>{\bfseries}l X@{}}
+Languages &
+Python, JavaScript \\[2pt]
+
+Generative AI &
+LLMs, Retrieval-Augmented Generation (RAG), Tool Calling,
+Agentic Workflows \\[2pt]
+
+Machine Learning &
+LoRA, Quantization, Inference Optimization \\[2pt]
+
+Backend Engineering &
+Django, REST APIs, System Design, Concurrency,
+Distributed Systems \\[2pt]
+
+Cloud and Operations &
+AWS (EC2, IAM, S3, VPC), Monitoring, Observability,
+Secure Deployments, CI/CD \\[2pt]
+
+Database &
+PostgreSQL
+\end{tabularx}
+
+% ================= EDUCATION =================
+\section*{Education}
+
+\entryheader
+  {B.E. in Computer Science}
+  {2020 -- 2024}
+
+Hindusthan College of Engineering and Technology,
+Coimbatore, India
+\hfill
+\textbf{CGPA: 8.67/10}
+
+\end{document}

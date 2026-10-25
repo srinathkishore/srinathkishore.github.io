@@ -1,1086 +1,329 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-    />
-    <title>Srinath Kishore — AI Systems Engineer</title>
-    <meta
-      name="description"
-      content="Srinath Kishore: Software engineer building CNN-powered medical screening tools and LLM-based enterprise automation on AWS. Specialist in AI systems, computer vision, and intelligent pipelines."
-    />
-    <meta
-      name="keywords"
-      content="AI engineer, machine learning, computer vision, CNN, LLM, RAG, Python, Django, AWS, portfolio"
-    />
-    <meta name="author" content="Srinath Kishore" />
-    <meta name="theme-color" content="#080808" />
-    <link rel="canonical" href="https://srinathkishore.github.io" />
-    <meta property="og:title" content="Srinath Kishore — AI Systems Engineer" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://srinathkishore.github.io" />
-    <meta property="og:image" content="assets/hero.png" />
-    <meta
-      property="og:description"
-      content="Software engineer specializing in AI systems, computer vision, and enterprise automation."
-    />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Srinath Kishore — AI Systems Engineer"
-    />
-    <meta
-      name="twitter:description"
-      content="Software engineer specializing in AI systems, computer vision, and enterprise automation."
-    />
-    <meta name="twitter:image" content="assets/hero.png" />
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Srinath Kishore",
-        "url": "https://srinathkishore.dev",
-        "jobTitle": "Software Engineer",
-        "description": "Software engineer specializing in AI systems, computer vision, and enterprise automation.",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Coimbatore",
-          "addressRegion": "Tamil Nadu",
-          "addressCountry": "IN"
-        },
-        "email": "mailto:srinathkishore.a@gmail.com",
-        "sameAs": [
-          "https://github.com/srinathkishore",
-          "https://linkedin.com/in/srinathkishore"
-        ]
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Srinath Kishore — Systems Development Engineer</title>
+  <meta name="description" content="Srinath Kishore: Systems Development Engineer at Amazon, Chennai. Backend &amp; AI engineer who built RAG systems at Greeno Tech, plus chess and multi-agent AI side projects.">
+  <meta name="keywords" content="Srinath Kishore, Systems Development Engineer, Amazon, software engineer, LLM, RAG, Python, Django, AWS, portfolio, Chennai">
+  <meta name="author" content="Srinath Kishore">
+  <link rel="canonical" href="https://srinathkishore.github.io/">
+  <meta property="og:title" content="Srinath Kishore — Systems Development Engineer">
+  <meta property="og:description" content="Backend &amp; AI engineer who somehow tripped into the code world. Now keeping Amazon's systems up.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://srinathkishore.github.io/">
+  <meta property="og:image" content="https://srinathkishore.github.io/assets/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Srinath Kishore — Systems Development Engineer">
+  <meta name="twitter:description" content="Backend &amp; AI engineer who somehow tripped into the code world. Now keeping Amazon's systems up.">
+  <meta name="twitter:image" content="https://srinathkishore.github.io/assets/og.jpg">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Srinath Kishore",
+      "jobTitle": "Systems Development Engineer I",
+      "worksFor": { "@type": "Organization", "name": "Amazon" },
+      "address": { "@type": "PostalAddress", "addressLocality": "Chennai", "addressCountry": "IN" },
+      "alumniOf": "Hindusthan College of Engineering and Technology",
+      "email": "mailto:srinathkishore.a@gmail.com",
+      "url": "https://srinathkishore.github.io/",
+      "sameAs": [
+        "https://github.com/srinathkishore",
+        "https://linkedin.com/in/srinathkishore",
+        "https://leetcode.com/u/user7929B/",
+        "https://www.chess.com/member/srinath_kishore"
+      ]
+    }
+  </script>
+  <meta name="theme-color" content="#05060f">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0c18'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial Black,Arial,sans-serif' font-weight='900' font-size='28' fill='%23ff6b4a'%3ESK%3C/text%3E%3C/svg%3E">
+
+  <link rel="preload" href="fonts/hubot-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/mona-sans.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+
+  <script>
+    (function () {
+      var root = document.documentElement, t = null;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (!t && matchMedia('(prefers-color-scheme: light)').matches) t = 'light';
+      if (t) root.dataset.theme = t;
+      if (t === 'light') document.querySelector('meta[name="theme-color"]').content = '#f5f0e7';
+      root.classList.add('js');
+      var n = navigator, c = n.connection;
+      if ((n.hardwareConcurrency && n.hardwareConcurrency <= 4) || (n.deviceMemory && n.deviceMemory <= 4) || (c && c.saveData)) {
+        root.classList.add('lite');
       }
-    </script>
-    <link rel="dns-prefetch" href="https://images.unsplash.com" />
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-    <link
-      rel="preload"
-      as="image"
-      href="assets/hero.png"
-      fetchpriority="high"
-    />
-    <link
-      rel="icon"
-      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Mono:wght@400;500&display=swap"
-      rel="stylesheet"
-      media="print"
-      onload="this.media = 'all'"
-    />
-    <noscript>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=DM+Mono:wght@400;500&display=swap"
-        rel="stylesheet"
-      />
-    </noscript>
-    <link rel="stylesheet" href="style.css" />
-    <noscript>
-      <style>
-        .reveal {
-          opacity: 1;
-          transform: none;
-        }
-      </style>
-    </noscript>
-  </head>
-  <body>
-    <a class="skip-link" href="#main-content">Skip to main content</a>
-    <!-- Custom Cursor -->
-    <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
-    <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
-    <!-- Mobile Navigation -->
-    <div
-      class="mob-nav"
-      id="mobNav"
-      role="dialog"
-      aria-modal="true"
-      aria-label="Mobile menu"
-    >
-      <button class="mob-close" id="mobClose" aria-label="Close menu">
-        <svg
-          width="20"
-          height="20"
-          viewBox="0 0 20 20"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.5"
-          stroke-linecap="round"
-        >
-          <line x1="2" y1="2" x2="18" y2="18" />
-          <line x1="18" y1="2" x2="2" y2="18" />
-        </svg>
-      </button>
-      <nav class="mob-nav-links" aria-label="Mobile navigation">
-        <a href="#hero" class="mob-link" onclick="closeMobNav()"
-          ><span class="mob-num">01</span>Home</a
-        >
-        <a href="#about" class="mob-link" onclick="closeMobNav()"
-          ><span class="mob-num">02</span>Story</a
-        >
-        <a href="#work" class="mob-link" onclick="closeMobNav()"
-          ><span class="mob-num">03</span>Beyond Work</a
-        >
-        <a href="#experience" class="mob-link" onclick="closeMobNav()"
-          ><span class="mob-num">04</span>Experience</a
-        >
-        <a href="#skills" class="mob-link" onclick="closeMobNav()"
-          ><span class="mob-num">05</span>Skills</a
-        >
-        <a href="#contact" class="mob-link" onclick="closeMobNav()"
-          ><span class="mob-num">06</span>Contact</a
-        >
-      </nav>
-    </div>
-    <!-- Header -->
-    <header id="site-header" role="banner">
-      <a href="#hero" class="logo" aria-label="Srinath Kishore — Home"
-        >SK<em>.</em></a
-      >
-      <nav aria-label="Primary navigation">
-        <a href="#about">Story</a>
-        <a href="#work">Beyond Work</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <div class="header-right">
-        <button
-          class="mob-menu-btn"
-          id="mobMenuBtn"
-          aria-label="Open menu"
-          aria-expanded="false"
-        >
-          <svg
-            width="24"
-            height="18"
-            viewBox="0 0 24 18"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            aria-hidden="true"
-          >
-            <line x1="0" y1="2" x2="24" y2="2" />
-            <line x1="5" y1="9" x2="24" y2="9" />
-            <line x1="0" y1="16" x2="24" y2="16" />
-          </svg>
-        </button>
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#about">Skip to content</a>
+
+  <div class="aurora" aria-hidden="true"><canvas width="160" height="160"></canvas><canvas width="160" height="160"></canvas><canvas width="160" height="160"></canvas></div>
+  <canvas id="stars" aria-hidden="true"></canvas>
+  <canvas id="planet" aria-hidden="true"></canvas>
+  <div class="planet-labels" aria-hidden="true"></div>
+  <div class="flight-plane" aria-hidden="true">
+    <svg viewBox="0 0 24 24"><path d="M21 15.5v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V8.5l-8 5v2l8-2.5V18l-2 1.5V21l3.5-1 3.5 1v-1.5L13 18v-5z"/></svg>
+  </div>
+
+  <header class="topbar">
+    <a class="mark" href="#top" aria-label="SK. Back to top">SK<span>.</span></a>
+    <button class="theme-toggle" type="button" aria-label="Switch to light mode">
+      <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><g><line x1="12" y1="1.5" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22.5"/><line x1="1.5" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22.5" y2="12"/><line x1="4.6" y1="4.6" x2="6.4" y2="6.4"/><line x1="17.6" y1="17.6" x2="19.4" y2="19.4"/><line x1="4.6" y1="19.4" x2="6.4" y2="17.6"/><line x1="17.6" y1="6.4" x2="19.4" y2="4.6"/></g></svg>
+      <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/></svg>
+    </button>
+  </header>
+
+  <nav class="glance" aria-label="At a glance">
+    <span class="status"><i aria-hidden="true"></i>SysDE I @ Amazon</span>
+    <a href="#about">About</a>
+    <a href="#career">Career</a>
+    <a href="#work">Work</a>
+    <a href="#quests">Quests</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main id="top">
+    <section class="hero">
+      <div class="planet" aria-hidden="true"></div>
+      <canvas id="particles" aria-hidden="true"></canvas>
+      <p class="hero-role">Systems Development Engineer I · Amazon</p>
+      <h1 class="hero-name"><span>Srinath</span> <span>Kishore</span></h1>
+      <p class="hero-line">Backend &amp; AI engineer who somehow tripped into the code world. Now keeping Amazon's systems up&nbsp;— and making my mark, preferably one that passes code review.</p>
+      <p class="hero-hint" aria-hidden="true">( go on, mess up my name )</p>
+      <a class="scroll-cue" href="#about"><span>↓</span> explore</a>
+    </section>
+
+    <section id="about" class="scene about" aria-labelledby="about-title">
+      <div class="scene-planet"><div class="planet-anchor" data-planet="about" aria-hidden="true"></div></div>
+      <div class="scene-cards">
+        <article class="card about-card">
+          <div class="about-id">
+            <figure class="headshot">
+              <div class="headshot-frame"><img src="assets/headshot.jpg" alt="Portrait of Srinath Kishore" width="152" height="152" decoding="async"></div>
+            </figure>
+            <p class="headshot-note">Chennai, India</p>
+          </div>
+          <h2 id="about-title" class="section-title reveal">Hi, I'm Srinath. I&nbsp;keep systems up and side projects coming.</h2>
+          <p class="about-quote">“Curiosity is the most powerful compiler.”</p>
+        </article>
+        <article class="card story-card">
+          <p>I was going to be a cardiologist, then a pilot, then a streamer&nbsp;— until I learned you could mod a phone's OS to squeeze more out of games. That rabbit hole became a career: figuring out how machines think and how to speak their language.</p>
+          <p class="desktop-only">These days I'm a Systems Development Engineer at Amazon, making sure things run the way they're supposed to (and finding out why when they don't). Before every build I ask one question: will this truly help someone? If yes, it deserves the best version I can make.</p>
+          <button class="text-btn mobile-only" type="button" data-sheet="about-more" aria-haspopup="dialog">Read more <span aria-hidden="true">+</span></button>
+          <div class="about-actions">
+            <a class="btn" href="assets/resume.pdf" target="_blank" rel="noopener">Résumé <span class="btn-tag">PDF</span><svg class="btn-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11 11 5M6 5h5v5"/></svg><span class="sr-only"> (opens in new tab)</span></a>
+            <a class="btn ghost" href="mailto:srinathkishore.a@gmail.com">Email me</a>
+          </div>
+        </article>
       </div>
-    </header>
-    <main id="main-content">
-      <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
-      <section id="hero" aria-labelledby="hero-heading">
-        <div class="hero-grid">
-          <div class="hero-right">
-            <div class="hero-img-wrap">
-              <img
-                src="assets/hero.png"
-                alt="Srinath Kishore — AI Systems Engineer"
-                class="hero-img"
-                width="800"
-                height="1000"
-                fetchpriority="high"
-                decoding="async"
-                sizes="(max-width: 640px) 90vw, (max-width: 1024px) 320px, 50vw"
-              />
+    </section>
+
+    <section id="career" class="scene career" aria-labelledby="career-title">
+      <div class="scene-planet"><div class="planet-anchor" data-planet="career" aria-hidden="true"></div></div>
+      <div class="scene-cards">
+        <h2 id="career-title" class="section-title reveal">Where I've landed so far.</h2>
+        <div class="career-grid">
+          <article class="card job">
+            <div class="job-head">
+              <span class="logo-chip"><img class="on-dark" src="assets/logos/amazon.png" alt="" width="60" height="18"><img class="on-light" src="assets/logos/amazon-dark.png" alt="" width="60" height="18"></span>
+              <p class="job-when mono">Sep 2026 — Present</p>
             </div>
-          </div>
-          <div class="hero-left">
-            <div class="hero-overline">
-              <span class="overline-dot" aria-hidden="true"></span>
-              <span>Srinath Kishore</span>
+            <h3>Systems Development Engineer I</h3>
+            <p class="job-where">Amazon · Chennai</p>
+            <p class="job-note">Just landed. More to report once the badge photo stops being embarrassing.</p>
+          </article>
+          <article class="card job">
+            <div class="job-head">
+              <span class="logo-chip"><img class="on-dark" src="assets/logos/greeno.png" alt="" width="60" height="18"><img class="on-light" src="assets/logos/greeno-dark.png" alt="" width="60" height="18"></span>
+              <p class="job-when mono">Jun 2024 — Sep 2026</p>
             </div>
-            <h1 class="hero-h1" id="hero-heading">
-              <span class="line" data-delay="0">I DESIGN</span>
-              <span class="line accent" data-delay="80">DEVELOP</span>
-              <span class="line" data-delay="160">DELIVER</span>
-            </h1>
-            <div class="hero-cta">
-              <a href="#work" class="btn-primary">
-                <span>Beyond Work</span>
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                >
-                  <path d="M3 8h10M9 4l4 4-4 4" />
-                </svg>
-              </a>
-              <a href="#contact" class="btn-ghost">Let's talk →</a>
-            </div>
-            <div class="hero-stats" role="list">
-              <div class="stat-card" role="listitem">
-                <span class="stat-num" data-target="92">0</span
-                ><span class="stat-unit">%</span>
-                <span class="stat-label">Model Accuracy</span>
-              </div>
-              <div class="stat-card" role="listitem">
-                <span class="stat-num">1+</span>
-                <span class="stat-label">Years Professional</span>
-              </div>
-              <div class="stat-card" role="listitem">
-                <span class="stat-num">∞</span>
-                <span class="stat-label">Problems Enjoyed</span>
-              </div>
-            </div>
-          </div>
+            <h3>Software Engineer, Backend &amp; AI Systems</h3>
+            <p class="job-where">Greeno Tech Solutions · Coimbatore</p>
+            <ul class="job-points">
+              <li>Built LLM-based RAG pipelines with role-based access control for HR, payroll and supply-chain use cases.</li>
+              <li>Developed backend services and REST APIs in Python, Django and PostgreSQL on AWS.</li>
+              <li>Handled Infor Process Automation workflows and Infor CloudSuite ERP configuration.</li>
+            </ul>
+            <button class="text-btn" type="button" data-sheet="greeno" aria-haspopup="dialog">All highlights <span aria-hidden="true">+</span></button>
+          </article>
         </div>
-      </section>
-      <!-- ═══════════════════════════ ABOUT ═══════════════════════════ -->
-      <section id="about" aria-labelledby="about-heading">
-        <div class="about-grid">
-          <div class="about-visual">
-            <div class="about-img-frame">
-              <img
-                src="assets/about.png"
-                alt="Developer workspace: monitors with code, warm studio lighting"
-                class="about-img"
-                loading="lazy"
-                decoding="async"
-                width="900"
-                height="1200"
-                fetchpriority="low"
-                sizes="(max-width: 1024px) 90vw, 45vw"
-              />
-              <div class="about-visual-accent" aria-hidden="true">02</div>
-              <div class="about-tag-wrap">
-                <span class="about-tag">My Story</span>
+      </div>
+    </section>
+
+    <section id="work" class="scene work" aria-labelledby="work-title">
+      <div class="scene-planet"><div class="planet-anchor" data-planet="work" aria-hidden="true"></div></div>
+      <div class="scene-cards">
+        <h2 id="work-title" class="section-title reveal">Things I built <em>because nobody stopped me.</em></h2>
+        <div class="project-grid">
+          <article class="card project" data-site="chess">
+            <div class="project-visual" aria-hidden="true">
+              <div class="chapter-visual chess" id="visual-chess">
+                <div class="eval"><span></span></div>
+                <div class="board">
+                  <span class="pc w" style="--c:7;--r:8">♚</span>
+                  <span class="pc w" style="--c:6;--r:8">♜</span>
+                  <span class="pc w" style="--c:6;--r:7">♟︎</span>
+                  <span class="pc w" style="--c:7;--r:7">♟︎</span>
+                  <span class="pc w" style="--c:8;--r:6">♟︎</span>
+                  <span class="pc w" style="--c:3;--r:6">♞</span>
+                  <span class="pc w moved" style="--c:5;--r:4">♛</span>
+                  <span class="pc b" style="--c:7;--r:1">♚</span>
+                  <span class="pc b" style="--c:6;--r:2">♟︎</span>
+                  <span class="pc b" style="--c:7;--r:2">♟︎</span>
+                  <span class="pc b" style="--c:8;--r:3">♟︎</span>
+                  <span class="pc b" style="--c:4;--r:1">♜</span>
+                  <span class="pc b lurker" style="--c:2;--r:4">♝</span>
+                  <span class="sq-from" style="--c:4;--r:1"></span>
+                  <span class="badge blunder mono" style="--c:5;--r:4">?? Blunder</span>
+                  <span class="badge brilliant mono" style="--c:2;--r:4">!! Brilliant</span>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="about-content">
-            <div class="section-label reveal" aria-hidden="true">
-              <span class="label-num">02</span>
-              <span class="label-text">About</span>
-              <span class="label-line"></span>
-            </div>
-            <h2 class="about-heading reveal" id="about-heading">
-              Curiosity is the<br />most powerful<br /><em>compiler.</em>
-            </h2>
-            <div class="about-body">
-              <p class="reveal">
-                Like many, I had countless ambitions growing up — cardiologist,
-                Air Force pilot, even a full-time gaming streamer.
-                <strong>Everything shifted</strong> when I discovered you could
-                modify a phone's OS to improve gaming performance.
-              </p>
-              <p class="reveal">
-                That single act of curiosity led me down a rabbit hole of
-                understanding how machines think — and how to
-                <strong>speak their language.</strong> Eventually that language
-                became my craft.
-              </p>
-              <p class="reveal">
-                When I build something, I pause and ask:
-                <em>will this truly help someone?</em> If yes, it deserves to be
-                the best version possible. No compromises. That's the standard I
-                hold every line of code to.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- ═══════════════════════════ HOBBIES ═══════════════════════════ -->
-      <section id="work" aria-labelledby="work-heading">
-        <div class="work-inner">
-          <div class="work-header">
-            <div class="section-label reveal" aria-hidden="true">
-              <span class="label-num">03</span>
-              <span class="label-text">Beyond Work</span>
-              <span class="label-line"></span>
-            </div>
-            <h2 class="work-headline reveal" id="work-heading">
-              <em>BEYOND</em> WORK
-            </h2>
-            <p class="work-subline reveal">
-              Outside of shipping code — the pursuits that keep me sharp,
-              grounded, and always improving.
-            </p>
-          </div>
-          <!-- Beyond Work Cards Grid -->
-          <div class="beyond-grid">
-            <!-- Chess Card -->
-            <article
-              class="beyond-card chess-card reveal"
-              aria-label="Chess profile"
-              id="chessCard"
-            >
-              <div class="beyond-card-img-wrap">
-                <img
-                  src="https://images.unsplash.com/photo-1529699211952-734e80c4d42b?w=800&auto=format&fit=crop&q=80"
-                  alt="Chess pieces on a board"
-                  class="beyond-card-img"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-              <div class="beyond-card-header">
-                <div class="beyond-icon chess-icon" aria-hidden="true">
-                  <svg
-                    width="28"
-                    height="28"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.4"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M9 22h6M8 22v-3h8v3M5 19h14M12 2v4M10 4h4M7 11V7h2V5h6v2h2v4l-2 3H9l-2-3z"
-                    />
-                    <path d="M9 14v5M15 14v5" />
+            <h3 id="chess-title">Chess Analyzer</h3>
+            <p class="project-sum">Feeds your chess.com games in and gives back a proper game review: the brilliant moves, the blunders, and exactly where it all went wrong.</p>
+            <p class="project-proof mono">Every move graded · best → inaccuracy → mistake → blunder</p>
+            <button class="text-btn" type="button" data-sheet="chess" aria-haspopup="dialog" aria-describedby="chess-title">Nerd details <span aria-hidden="true">+</span></button>
+          </article>
+          <article class="card project" data-site="atoll">
+            <div class="project-visual" aria-hidden="true">
+              <div class="chapter-visual circle" id="visual-agents">
+                <div class="agents">
+                  <svg class="layer" viewBox="0 0 400 400"><circle class="table" cx="200" cy="200" r="130"/></svg>
+                  <svg class="layer ring" viewBox="0 0 400 400"><circle class="table inner" cx="200" cy="200" r="92"/></svg>
+                  <svg class="layer glow" viewBox="0 0 400 400">
+                    <defs>
+                      <radialGradient id="core" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" stop-color="var(--accent)" stop-opacity=".95"/>
+                        <stop offset="100%" stop-color="var(--accent)" stop-opacity="0"/>
+                      </radialGradient>
+                    </defs>
+                    <circle cx="200" cy="200" r="70" fill="url(#core)"/>
                   </svg>
-                </div>
-                <div class="beyond-card-title-wrap">
-                  <h3 class="beyond-card-title">Chess</h3>
-                  <span class="beyond-card-platform"
-                    >chess.com · srinath_kishore</span
-                  >
-                </div>
-                <a
-                  href="https://www.chess.com/member/srinath_kishore"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="beyond-card-link"
-                  aria-label="View chess.com profile"
-                >
-                  <svg
-                    width="14"
-                    height="14"
-                    viewBox="0 0 12 12"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M2 10L10 2M10 2H4M10 2v6" />
-                  </svg>
-                </a>
-              </div>
-              <div class="chess-live-stats" id="chessLiveStats">
-                <div class="chess-skeleton" id="chessSkeleton">
-                  <div class="skel-row">
-                    <div class="skel-block skel-wide"></div>
-                    <div class="skel-block skel-narrow"></div>
-                  </div>
-                  <div class="skel-row">
-                    <div class="skel-block skel-wide"></div>
-                    <div class="skel-block skel-narrow"></div>
-                  </div>
-                  <div class="skel-row">
-                    <div class="skel-block skel-wide"></div>
-                    <div class="skel-block skel-narrow"></div>
-                  </div>
-                </div>
-              </div>
-            </article>
-            <!-- LeetCode Card -->
-            <article
-              class="beyond-card leetcode-card reveal"
-              aria-label="LeetCode profile"
-            >
-              <div class="beyond-card-img-wrap">
-                <img
-                  src="assets/leetcode.png"
-                  alt="Srinath Kishore Leetcode profile"
-                  class="beyond-card-img"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-              <div class="beyond-card-header">
-                <div class="beyond-icon leetcode-icon" aria-hidden="true">
-                  <svg
-                    width="28"
-                    height="28"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.4"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M16.102 17.93l-2.697 2.607c-.466.467-1.111.662-1.823.662s-1.357-.195-1.824-.662l-4.332-4.363c-.467-.467-.702-1.15-.702-1.863s.235-1.357.702-1.824l4.319-4.38c.467-.467 1.112-.661 1.824-.661s1.357.194 1.823.66l2.697 2.606c.514.515 1.111.759 1.823.77"
-                    />
-                    <path
-                      d="M20.811 7.432l-2.697-2.606c-.466-.467-1.111-.661-1.823-.661s-1.357.194-1.824.661"
-                    />
-                    <line x1="7" y1="12" x2="17" y2="12" />
-                  </svg>
-                </div>
-                <div class="beyond-card-title-wrap">
-                  <h3 class="beyond-card-title">LeetCode</h3>
-                  <span class="beyond-card-platform"
-                    >leetcode.com · user7929B</span
-                  >
-                </div>
-                <a
-                  href="https://leetcode.com/u/user7929B/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="beyond-card-link"
-                  aria-label="View LeetCode profile"
-                >
-                  <svg
-                    width="14"
-                    height="14"
-                    viewBox="0 0 12 12"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M2 10L10 2M10 2H4M10 2v6" />
-                  </svg>
-                </a>
-              </div>
-              <!-- Stats populated by JS -->
-              <div class="lc-live-stats" id="lcLiveStats">
-                <div class="chess-skeleton" id="lcSkeleton">
-                  <div class="skel-row">
-                    <div class="skel-block skel-wide"></div>
-                    <div class="skel-block skel-narrow"></div>
-                  </div>
-                  <div class="skel-row">
-                    <div class="skel-block skel-wide"></div>
-                    <div class="skel-block skel-narrow"></div>
-                  </div>
-                  <div class="skel-row">
-                    <div class="skel-block" style="width: 60%"></div>
-                  </div>
-                </div>
-              </div>
-            </article>
-            <!-- Fitness Card -->
-            <article
-              class="beyond-card fitness-card reveal"
-              aria-label="Fitness and running"
-            >
-              <div class="beyond-card-img-wrap">
-                <img
-                  src="https://images.unsplash.com/photo-1571008887538-b36bb32f4571?w=800&auto=format&fit=crop&q=80"
-                  alt="Runner on a road at sunrise"
-                  class="beyond-card-img"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-              <div class="beyond-card-header">
-                <div class="beyond-icon fitness-icon" aria-hidden="true">
-                  <svg
-                    width="28"
-                    height="28"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.4"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M13 4a1 1 0 1 1 2 0 1 1 0 0 1-2 0z" />
-                    <path d="M5 17l2-6 3 2 2-4 3 2 2-5" />
-                    <path d="M3 20h18" />
-                  </svg>
-                </div>
-                <div class="beyond-card-title-wrap">
-                  <h3 class="beyond-card-title">Fitness</h3>
-                  <span class="beyond-card-platform"
-                    >Running · Gym · Marathons</span
-                  >
-                </div>
-                <div class="fitness-strava-badge">
-                  <span>Half Marathon Soon</span>
-                </div>
-              </div>
-              <div class="fitness-pbs">
-                <div class="fitness-pb-card">
-                  <div class="fitness-pb-distance">5K</div>
-                  <div class="fitness-pb-time">30:26</div>
-                  <div class="fitness-pb-pace">
-                    <svg
-                      width="11"
-                      height="11"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                    >
-                      <circle cx="8" cy="8" r="6" />
-                      <path d="M8 5v4l2 2" />
+                  <svg class="layer" viewBox="0 0 400 400"><circle class="core" cx="200" cy="200" r="16"/></svg>
+                  <div class="layer orbit">
+                    <svg class="layer" viewBox="0 0 400 400">
+                      <g class="spokes">
+                        <line x1="200" y1="70" x2="200" y2="200"/>
+                        <line x1="312.6" y1="265" x2="200" y2="200"/>
+                        <line x1="87.4" y1="265" x2="200" y2="200"/>
+                      </g>
                     </svg>
-                    6:03 / km
-                  </div>
-                  <span class="fitness-pb-label">Personal Best</span>
-                </div>
-                <div class="fitness-pb-divider" aria-hidden="true"></div>
-                <div class="fitness-pb-card">
-                  <div class="fitness-pb-distance">10K</div>
-                  <div class="fitness-pb-time">81:02</div>
-                  <div class="fitness-pb-pace">
-                    <svg
-                      width="11"
-                      height="11"
-                      viewBox="0 0 16 16"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                    >
-                      <circle cx="8" cy="8" r="6" />
-                      <path d="M8 5v4l2 2" />
-                    </svg>
-                    8:06 / km
-                  </div>
-                  <span class="fitness-pb-label">Personal Best</span>
-                </div>
-              </div>
-              <div class="fitness-routine">
-                <div class="fitness-routine-row">
-                  <div class="fitness-activity">
-                    <svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="var(--ember)"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path d="M13 4a1 1 0 1 1 2 0 1 1 0 0 1-2 0z" />
-                      <path d="M5.5 21l2.5-7 3 2 2-5 2 2 2-5" />
-                    </svg>
-                    <span>Road Running</span>
-                  </div>
-                  <div class="fitness-activity">
-                    <svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="var(--ember)"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path d="M6 4v16M18 4v16M6 12h12" />
-                      <rect x="2" y="2" width="6" height="6" rx="1" />
-                      <rect x="16" y="2" width="6" height="6" rx="1" />
-                      <rect x="2" y="16" width="6" height="6" rx="1" />
-                      <rect x="16" y="16" width="6" height="6" rx="1" />
-                    </svg>
-                    <span>Weight Training</span>
-                  </div>
-                  <div class="fitness-activity">
-                    <svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="var(--ember)"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path d="M12 22V12M12 12L8 8M12 12L16 8" />
-                      <path d="M5 6a7 7 0 0 1 14 0" />
-                    </svg>
-                    <span>Marathon Prep</span>
+                    <span class="seat" style="--x:50%;--y:17.5%;--p:var(--c-chatgpt);--i:0"><svg viewBox="0 0 24 24"><path d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.872zm16.5963 3.8558L13.1038 8.364 15.1192 7.2a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.667zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l2.602-1.4998 2.6069 1.4998v2.9994l-2.5974 1.4997-2.6067-1.4997Z"/></svg></span>
+                    <span class="seat" style="--x:78.15%;--y:66.25%;--p:var(--c-claude);--i:1"><svg viewBox="0 0 24 24"><path d="m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z"/></svg></span>
+                    <span class="seat" style="--x:21.85%;--y:66.25%;--p:var(--c-gemini);--i:2"><svg viewBox="0 0 24 24"><path d="M11.04 19.32Q12 21.51 12 24q0-2.49.93-4.68.96-2.19 2.58-3.81t3.81-2.55Q21.51 12 24 12q-2.49 0-4.68-.93a12.3 12.3 0 0 1-3.81-2.58 12.3 12.3 0 0 1-2.58-3.81Q12 2.49 12 0q0 2.49-.96 4.68-.93 2.19-2.55 3.81a12.3 12.3 0 0 1-3.81 2.58Q2.49 12 0 12q2.49 0 4.68.96 2.19.93 3.81 2.55t2.55 3.81"/></svg></span>
                   </div>
                 </div>
               </div>
-            </article>
-          </div>
+            </div>
+            <h3 id="agents-title">Agents Circle</h3>
+            <p class="project-sum">A round table for AI models. They mull over the same prompt, argue it out, and agree on one answer, so you don't have to ask five chatbots.</p>
+            <p class="project-proof mono">GPT-4o · Claude · Gemini · 3 debate rounds</p>
+            <button class="text-btn" type="button" data-sheet="agents" aria-haspopup="dialog" aria-describedby="agents-title">Nerd details <span aria-hidden="true">+</span></button>
+          </article>
         </div>
-      </section>
-      <!-- ═══════════════════════════ EXPERIENCE ═══════════════════════════ -->
-      <section id="experience" aria-labelledby="exp-heading">
-        <div class="exp-bg-text" aria-hidden="true">EXP</div>
-        <div class="exp-inner">
-          <div class="exp-left">
-            <div class="section-label reveal" aria-hidden="true">
-              <span class="label-num">04</span>
-              <span class="label-text">Experience</span>
-              <span class="label-line"></span>
-            </div>
-            <h2 class="exp-headline reveal" id="exp-heading">
-              WHERE<br /><em>I'VE</em>WORKED
-            </h2>
-            <p class="exp-philosophy reveal">
-              Enterprise AI systems, RAG pipelines, and automation that moves
-              real business. Built with precision, deployed at scale, validated
-              by clients.
-            </p>
+      </div>
+    </section>
+
+    <section id="quests" class="scene quests" aria-labelledby="quests-title">
+      <h2 id="quests-title" class="section-title reveal">What I do when nothing is on fire.</h2>
+      <div class="quest-grid">
+        <article class="quest">
+          <p class="quest-kicker">Chess <span class="live-tag" data-stats-status="chess">as of Oct 2026</span></p>
+          <h3><span class="big" data-chess="games">14,297</span> games</h3>
+          <p class="quest-sub"><span data-chess="wins">6,999</span> wins, a <span data-chess="winrate">49%</span> win rate, and the blunders to match.</p>
+          <div class="quest-data">
+            <p class="quest-caption">ELO rating</p>
+            <dl class="tiles">
+              <div><dt>Blitz</dt><dd><span class="val" data-chess="blitz">1290</span><span class="sub mono" data-chess="blitz-best">best 1377</span></dd></div>
+              <div><dt>Rapid</dt><dd><span class="val" data-chess="rapid">1114</span><span class="sub mono" data-chess="rapid-best">best 1164</span></dd></div>
+              <div><dt>Bullet</dt><dd><span class="val" data-chess="bullet">1122</span><span class="sub mono" data-chess="bullet-best">best 1168</span></dd></div>
+            </dl>
           </div>
-          <div class="exp-timeline" role="list" aria-label="Work experience">
-            <article class="exp-item reveal" role="listitem">
-              <div class="exp-connector" aria-hidden="true"><span></span></div>
-              <div class="exp-content">
-                <div class="exp-meta">
-                  <div class="exp-role-wrap">
-                    <h3 class="exp-role">Software Engineer</h3>
-                    <span class="exp-company">Greeno Tech Solutions</span>
-                  </div>
-                  <div class="exp-period-wrap">
-                    <time class="exp-period" datetime="2024-06">June 2024</time>
-                    <span class="exp-period-sep" aria-hidden="true">→</span>
-                    <span class="exp-period">Present</span>
-                    <span class="exp-badge">Current</span>
-                  </div>
-                </div>
-                <div class="exp-body">
-                  <p>
-                    Contributing to the R&D of enterprise AI systems and
-                    intelligent assistants aimed at automating complex business
-                    workflows. Designing and refining
-                    <em>LLM-based RAG pipelines</em>
-                    with role-based access controls to support use cases across
-                    HR, payroll, and supply chain operations.
-                  </p>
-                  <p>
-                    Developing backend services using
-                    <em>Python and Django</em>, building automation logic, and
-                    preparing system designs and implementation reports.
-                    Regularly reviewing progress with the project manager and
-                    reporting updates, architecture decisions, and
-                    implementation outcomes. AI solutions are periodically
-                    showcased to clients through demos to demonstrate
-                    capabilities and gather feedback during the development
-                    phase.
-                  </p>
-                  <p>
-                    Working as a <em>technical ERP resource</em> handling Infor
-                    Process Automation (IPA) workflows and assisting with Infor
-                    Cloudsuite ERP configurations, bridging the gap between AI
-                    development and enterprise operations.
-                  </p>
-                </div>
-                <div class="exp-tech" aria-label="Technologies used">
-                  <span class="exp-tech-item">Python</span>
-                  <span class="exp-tech-item">Django</span>
-                  <span class="exp-tech-item">LLM</span>
-                  <span class="exp-tech-item">RAG</span>
-                  <span class="exp-tech-item">AWS</span>
-                  <span class="exp-tech-item">REST APIs</span>
-                  <span class="exp-tech-item">PostgreSQL</span>
-                  <span class="exp-tech-item">Vector DBs</span>
-                  <span class="exp-tech-item">Infor Cloudsuite</span>
-                </div>
-              </div>
-            </article>
+          <a class="link" href="https://www.chess.com/member/srinath_kishore" target="_blank" rel="noopener">chess.com/srinath_kishore<span aria-hidden="true"> ↗</span><span class="sr-only"> (opens in new tab)</span></a>
+        </article>
+        <article class="quest">
+          <p class="quest-kicker">LeetCode <span class="live-tag" data-stats-status="leetcode">as of Oct 2026</span></p>
+          <h3><span class="big" data-lc="solved">641</span> solved</h3>
+          <p class="quest-sub">Keeping the algorithm muscles warm. Earned the 100 Days Badge in 2025.</p>
+          <div class="quest-data">
+            <p class="quest-caption">Problems by difficulty</p>
+            <dl class="tiles">
+              <div class="easy"><dt>Easy</dt><dd><span class="val" data-lc="easy">530</span><span class="sub mono" data-lc="easy-pct">83%</span></dd></div>
+              <div class="medium"><dt>Medium</dt><dd><span class="val" data-lc="medium">101</span><span class="sub mono" data-lc="medium-pct">16%</span></dd></div>
+              <div class="hard"><dt>Hard</dt><dd><span class="val" data-lc="hard">10</span><span class="sub mono" data-lc="hard-pct">2%</span></dd></div>
+            </dl>
           </div>
-        </div>
-        <div class="tech-strip" aria-hidden="true">
-          <div class="tech-strip-inner">
-            <span class="ts-item">Python · Django</span>
-            <span class="ts-dot">✦</span>
-            <span class="ts-item">LLM · RAG</span>
-            <span class="ts-dot">✦</span>
-            <span class="ts-item">AWS Cloud</span>
-            <span class="ts-dot">✦</span>
-            <span class="ts-item">Computer Vision</span>
-            <span class="ts-dot">✦</span>
-            <span class="ts-item">CNN · PyTorch</span>
-            <span class="ts-dot">✦</span>
-            <span class="ts-item">REST APIs</span>
-            <span class="ts-dot">✦</span>
-            <span class="ts-item">Automation</span>
-            <span class="ts-dot">✦</span>
-            <span class="ts-item">Python · Django</span>
-            <span class="ts-dot">✦</span>
-            <span class="ts-item">LLM · RAG</span>
-            <span class="ts-dot">✦</span>
-            <span class="ts-item">AWS Cloud</span>
-            <span class="ts-dot">✦</span>
-            <span class="ts-item">Computer Vision</span>
-            <span class="ts-dot">✦</span>
-            <span class="ts-item">CNN · PyTorch</span>
-            <span class="ts-dot">✦</span>
-            <span class="ts-item">REST APIs</span>
-            <span class="ts-dot">✦</span>
-            <span class="ts-item">Automation</span>
-            <span class="ts-dot">✦</span>
-          </div>
-        </div>
-      </section>
-      <!-- ═══════════════════════════ SKILLS ═══════════════════════════ -->
-      <section id="skills" aria-labelledby="skills-heading">
-        <div class="skills-inner">
-          <div class="skills-top">
-            <div class="section-label reveal" aria-hidden="true">
-              <span class="label-num">05</span>
-              <span class="label-text">Skills</span>
-              <span class="label-line"></span>
-            </div>
-            <div class="skills-header">
-              <h2 class="skills-headline reveal" id="skills-heading">
-                BUILT<br /><em>WITH</em>
-              </h2>
-              <p class="skills-copy reveal">
-                A working toolkit shaped by real projects — not checkbox skills.
-                Every entry earned by shipping things that had to work under
-                real-world pressure.
-              </p>
-            </div>
-          </div>
-          <div class="skills-grid" role="list" aria-label="Skill categories">
-            <div class="skill-category reveal" role="listitem">
-              <div class="sc-icon" aria-hidden="true">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <circle cx="10" cy="10" r="3" />
-                  <path
-                    d="M10 2v2M10 16v2M2 10h2M16 10h2M4.22 4.22l1.42 1.42M14.36 14.36l1.42 1.42M4.22 15.78l1.42-1.42M14.36 5.64l1.42-1.42"
-                  />
-                </svg>
-              </div>
-              <h3 class="sc-title">AI / ML</h3>
-              <ul class="sc-list" role="list">
-                <li>PyTorch</li>
-                <li>TensorFlow</li>
-                <li>Scikit-learn</li>
-                <li>HuggingFace</li>
-                <li>LangChain</li>
-                <li>OpenCV</li>
-              </ul>
-            </div>
-            <div class="skill-category reveal" role="listitem">
-              <div class="sc-icon" aria-hidden="true">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <rect x="2" y="3" width="16" height="14" rx="2" />
-                  <path d="M7 7l3 3-3 3M11 13h2" />
-                </svg>
-              </div>
-              <h3 class="sc-title">Backend</h3>
-              <ul class="sc-list" role="list">
-                <li>Python</li>
-                <li>Django</li>
-                <li>FastAPI</li>
-                <li>REST APIs</li>
-                <li>PostgreSQL</li>
-                <li>Redis</li>
-              </ul>
-            </div>
-            <div class="skill-category reveal" role="listitem">
-              <div class="sc-icon" aria-hidden="true">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M3 6l7-4 7 4v8l-7 4-7-4z" />
-                  <path d="M10 2v18M3 6l7 4 7-4" />
-                </svg>
-              </div>
-              <h3 class="sc-title">Infrastructure</h3>
-              <ul class="sc-list" role="list">
-                <li>AWS</li>
-                <li>Docker</li>
-                <li>Linux</li>
-                <li>CI/CD</li>
-                <li>Git</li>
-                <li>Vector DBs</li>
-              </ul>
-            </div>
-            <div class="skill-category reveal" role="listitem">
-              <div class="sc-icon" aria-hidden="true">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M2 10h16M2 5h16M2 15h10" />
-                </svg>
-              </div>
-              <h3 class="sc-title">Data & Analysis</h3>
-              <ul class="sc-list" role="list">
-                <li>NumPy</li>
-                <li>Pandas</li>
-                <li>Matplotlib</li>
-                <li>RAG Pipelines</li>
-                <li>Embedding Models</li>
-                <li>Fine-tuning</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="marquee-container" aria-hidden="true">
-          <div class="marquee-wrap">
-            <div class="marquee">
-              <span class="mpill">Python</span><span class="mpill">Django</span
-              ><span class="mpill">PyTorch</span
-              ><span class="mpill">TensorFlow</span
-              ><span class="mpill">Computer Vision</span
-              ><span class="mpill">CNN</span><span class="mpill">LLM</span
-              ><span class="mpill">RAG</span><span class="mpill">AWS</span
-              ><span class="mpill">REST APIs</span
-              ><span class="mpill">PostgreSQL</span
-              ><span class="mpill">Docker</span>
-              <span class="mpill">Python</span><span class="mpill">Django</span
-              ><span class="mpill">PyTorch</span
-              ><span class="mpill">TensorFlow</span
-              ><span class="mpill">Computer Vision</span
-              ><span class="mpill">CNN</span><span class="mpill">LLM</span
-              ><span class="mpill">RAG</span><span class="mpill">AWS</span
-              ><span class="mpill">REST APIs</span
-              ><span class="mpill">PostgreSQL</span
-              ><span class="mpill">Docker</span>
-            </div>
-          </div>
-          <div class="marquee-wrap marquee-wrap--reverse">
-            <div class="marquee marquee--rev">
-              <span class="mpill">OpenCV</span
-              ><span class="mpill">LangChain</span
-              ><span class="mpill">FastAPI</span><span class="mpill">Redis</span
-              ><span class="mpill">Git</span><span class="mpill">Linux</span
-              ><span class="mpill">NumPy</span><span class="mpill">Pandas</span
-              ><span class="mpill">Scikit-learn</span
-              ><span class="mpill">HuggingFace</span
-              ><span class="mpill">Vector DBs</span
-              ><span class="mpill">CI/CD</span> <span class="mpill">OpenCV</span
-              ><span class="mpill">LangChain</span
-              ><span class="mpill">FastAPI</span><span class="mpill">Redis</span
-              ><span class="mpill">Git</span><span class="mpill">Linux</span
-              ><span class="mpill">NumPy</span><span class="mpill">Pandas</span
-              ><span class="mpill">Scikit-learn</span
-              ><span class="mpill">HuggingFace</span
-              ><span class="mpill">Vector DBs</span
-              ><span class="mpill">CI/CD</span>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- ═══════════════════════════ CONTACT ═══════════════════════════ -->
-      <section id="contact" aria-labelledby="contact-heading">
-        <div class="contact-inner">
-          <div class="contact-left">
-            <div class="section-label reveal" aria-hidden="true">
-              <span class="label-num">06</span>
-              <span class="label-text">Contact</span>
-              <span class="label-line"></span>
-            </div>
-            <h2 class="contact-headline reveal" id="contact-heading">
-              LET'S<br /><em>TALK.</em>
-            </h2>
-            <p class="contact-sub reveal">
-              Whether it's a collaboration, opportunity, or an idea too big to
-              ignore — I'm interested. Reach out directly.
-            </p>
-            <div class="contact-availability reveal">
-              <span class="avail-dot" aria-hidden="true"></span>
-              <span>Open to opportunities &amp; freelance work</span>
-            </div>
-            <a
-              href="mailto:srinathkishore.a@gmail.com"
-              class="contact-email-link reveal"
-              aria-label="Send email to Srinath Kishore"
-            >
-              srinathkishore.a@gmail.com
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-              >
-                <path
-                  d="M4 4h12l-6 7-6-7zM4 4v9a1 1 0 001 1h10a1 1 0 001-1V4"
-                />
-              </svg>
-            </a>
-          </div>
-          <div class="contact-right">
-            <div class="contact-details">
-              <div class="contact-item reveal">
-                <span class="contact-item-label">Location</span>
-                <span class="contact-item-value"
-                  >Coimbatore, Tamil Nadu, India</span
-                >
-              </div>
-              <div class="contact-item reveal">
-                <span class="contact-item-label">GitHub</span>
-                <a
-                  href="https://github.com/srinathkishore"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="contact-item-value contact-item-link"
-                >
-                  github.com/srinathkishore
-                  <svg
-                    width="12"
-                    height="12"
-                    viewBox="0 0 12 12"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path d="M2 10L10 2M10 2H4M10 2v6" />
-                  </svg>
-                </a>
-              </div>
-              <div class="contact-item reveal">
-                <span class="contact-item-label">LinkedIn</span>
-                <a
-                  href="https://linkedin.com/in/srinathkishore"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="contact-item-value contact-item-link"
-                >
-                  linkedin.com/in/srinathkishore
-                  <svg
-                    width="12"
-                    height="12"
-                    viewBox="0 0 12 12"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path d="M2 10L10 2M10 2H4M10 2v6" />
-                  </svg>
-                </a>
-              </div>
-              <div class="contact-item reveal">
-                <span class="contact-item-label">Leetcode</span>
-                <a
-                  href="https://leetcode.com/u/user7929B/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="contact-item-value contact-item-link"
-                >
-                  leetcode.com/u/user7929B/
-                  <svg
-                    width="12"
-                    height="12"
-                    viewBox="0 0 12 12"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path d="M2 10L10 2M10 2H4M10 2v6" />
-                  </svg>
-                </a>
-              </div>
-              <div class="contact-item reveal">
-                <span class="contact-item-label">Chess.com</span>
-                <a
-                  href="https://chess.com/member/srinath_kishore"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="contact-item-value contact-item-link"
-                >
-                  chess.com/srinath_kishore
-                  <svg
-                    width="12"
-                    height="12"
-                    viewBox="0 0 12 12"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path d="M2 10L10 2M10 2H4M10 2v6" />
-                  </svg>
-                </a>
-              </div>
-              <div class="contact-item reveal">
-                <span class="contact-item-label">Resume</span>
-                <a
-                  href="assets/srinath-kishore-resume.pdf"
-                  class="contact-item-value contact-item-link"
-                  download
-                >
-                  Download PDF
-                  <svg
-                    width="12"
-                    height="12"
-                    viewBox="0 0 12 12"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path d="M6 2v6M3 6l3 3 3-3M2 10h8" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <footer class="site-footer" role="contentinfo">
-          <span class="footer-copy">© 2026 Srinath Kishore</span>
-          <span class="footer-tagline">
-            <em>systems &amp; intelligence</em>
-          </span>
-          <span class="footer-location">Coimbatore, Tamil Nadu</span>
-        </footer>
-      </section>
-    </main>
-    <script src="main.js" defer></script>
-  </body>
+          <a class="link" href="https://leetcode.com/u/user7929B/" target="_blank" rel="noopener">leetcode.com/u/user7929B<span aria-hidden="true"> ↗</span><span class="sr-only"> (opens in new tab)</span></a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="scene contact" aria-labelledby="contact-title">
+      <div class="planet-anchor" data-planet="contact" aria-hidden="true"></div>
+      <div>
+      <h2 id="contact-title" class="section-title reveal">Got an idea, a bug, or a better tagline?</h2>
+      <div class="email-row">
+        <a class="email" href="mailto:srinathkishore.a@gmail.com">srinathkishore.a@<wbr>gmail.com</a>
+        <button class="copy" type="button" data-copy="srinathkishore.a@gmail.com" aria-label="Copy email address">copy</button>
+      </div>
+      <p class="availability"><i aria-hidden="true"></i>Open to side-project collabs &amp; ideas · Chennai, India</p>
+      <ul class="socials">
+        <li><a href="https://linkedin.com/in/srinathkishore" target="_blank" rel="noopener">LinkedIn<span aria-hidden="true"> ↗</span><span class="sr-only"> (opens in new tab)</span></a></li>
+        <li><a href="https://github.com/srinathkishore" target="_blank" rel="noopener">GitHub<span aria-hidden="true"> ↗</span><span class="sr-only"> (opens in new tab)</span></a></li>
+        <li><a href="assets/resume.pdf" target="_blank" rel="noopener">Résumé<span aria-hidden="true"> ↗</span><span class="sr-only"> (opens in new tab)</span></a></li>
+        <li><a href="https://leetcode.com/u/user7929B/" target="_blank" rel="noopener">LeetCode<span aria-hidden="true"> ↗</span><span class="sr-only"> (opens in new tab)</span></a></li>
+        <li><a href="https://www.chess.com/member/srinath_kishore" target="_blank" rel="noopener">Chess<span aria-hidden="true"> ↗</span><span class="sr-only"> (opens in new tab)</span></a></li>
+      </ul>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="sheet" id="sheet" aria-labelledby="sheet-title">
+    <button class="sheet-close" type="button" aria-label="Close">×</button>
+    <div class="sheet-body" tabindex="-1" autofocus data-lenis-prevent></div>
+  </dialog>
+  <template id="tpl-about-more">
+    <h3 id="sheet-title">These days</h3>
+    <p>These days I'm a Systems Development Engineer at Amazon, making sure things run the way they're supposed to (and finding out why when they don't). Before every build I ask one question: will this truly help someone? If yes, it deserves the best version I can make.</p>
+  </template>
+  <template id="tpl-greeno">
+    <p class="eyebrow">Jun 2024 — Sep 2026 · Coimbatore</p>
+    <h3 id="sheet-title">Greeno Tech Solutions</h3>
+    <p class="sheet-sub">Software Engineer, Backend &amp; AI Systems</p>
+    <ul class="job-points">
+      <li>Built LLM-based RAG pipelines with role-based access control for HR, payroll and supply-chain use cases.</li>
+      <li>Developed backend services and REST APIs in Python, Django and PostgreSQL, deployed on AWS (EC2, IAM, S3, VPC).</li>
+      <li>Implemented authentication, authorization and RBAC, and hardened deployments for high availability.</li>
+      <li>Handled Infor Process Automation workflows and Infor CloudSuite ERP configuration.</li>
+      <li>Demoed AI solutions to clients and turned their feedback into the next iteration.</li>
+    </ul>
+    <ul class="stack mono"><li>Python</li><li>Django</li><li>LLM</li><li>RAG</li><li>AWS</li><li>PostgreSQL</li><li>Vector DBs</li><li>Infor CloudSuite</li></ul>
+  </template>
+  <template id="tpl-chess">
+    <div class="sheet-visual" data-clone="#visual-chess" aria-hidden="true"></div>
+    <h3 id="sheet-title">Chess Analyzer</h3>
+    <p>Pulls a player's games from chess.com, replays every position through an engine, and labels each move (best, inaccuracy, mistake, blunder) based on how much the evaluation swung.</p>
+    <ul class="stack mono"><li>Python</li><li>chess.com API</li><li>Stockfish (UCI)</li><li>PGN parsing</li></ul>
+    <p class="sheet-links"><a class="link" href="https://github.com/srinathkishore/chess_analyzer" target="_blank" rel="noopener">github.com/srinathkishore/chess_analyzer<span aria-hidden="true"> ↗</span><span class="sr-only"> (opens in new tab)</span></a></p>
+  </template>
+  <template id="tpl-agents">
+    <div class="sheet-visual" data-clone="#visual-agents" aria-hidden="true"></div>
+    <h3 id="sheet-title">Agents Circle</h3>
+    <p>Sends one prompt to GPT-4o, Claude and Gemini in parallel, has them read and respond to each other's answers over three debate rounds, then merges their conclusions into a single unified output.</p>
+    <ul class="stack mono"><li>Python</li><li>FastAPI</li><li>GPT-4o</li><li>Claude</li><li>Gemini</li></ul>
+    <p class="sheet-links"><a class="link" href="https://github.com/srinathkishore/agents_circle" target="_blank" rel="noopener">github.com/srinathkishore/agents_circle<span aria-hidden="true"> ↗</span><span class="sr-only"> (opens in new tab)</span></a></p>
+  </template>
+
+  <div class="toast" role="status" aria-live="polite"></div>
+  <script src="vendor/lenis.min.js" defer></script>
+  <script src="main.js" defer></script>
+  <script src="planet.js" defer></script>
+</body>
 </html>

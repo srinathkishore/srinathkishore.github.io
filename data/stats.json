@@ -1,10 +1,10 @@
 {
   "chess": {
     "user": "srinath_kishore",
-    "games": 14596,
-    "wins": 7143,
+    "games": 14604,
+    "wins": 7150,
     "blitz": {
-      "rating": 1267,
+      "rating": 1313,
       "best": 1377
     },
     "rapid": {
@@ -15,7 +15,7 @@
       "rating": 1139,
       "best": 1168
     },
-    "updatedAt": "2026-11-11T07:46:44.905Z"
+    "updatedAt": "2026-11-12T08:23:50.582Z"
   },
   "leetcode": {
     "user": "user7929B",
